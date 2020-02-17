@@ -13,7 +13,7 @@
     "coc": "^0.0.79"
   },
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "node node_modules/rimraf/bin.js lib",
     "build": "webpack",
     "prepare": "webpack"
   },
