@@ -178,7 +178,7 @@ export class UltiSnippetsProvider extends BaseProvider {
       pyCodes.push('import re, os, vim, string, random')
       pyCodes.push(`t = ('', ${vals.join(',')})`)
       pyCodes.push(`fn = '${path.basename(filepath)}'`)
-      pyCodes.push(`path = '${filepath}'`)
+      pyCodes.push(`path = '${filepath.replace('\\', '\\\\')}'`)
       if (context) {
         pyCodes.push(`snip = ContextSnippet()`)
         pyCodes.push(`context = ${context}`)
